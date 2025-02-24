@@ -6,8 +6,9 @@
       "use": "@vercel/python"
     },
     {
-      "src": "src/**",
-      "use": "@vercel/static-build"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
@@ -16,8 +17,11 @@
       "dest": "backend/app.py"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "src/index.html"
+      "dest": "/index.html"
     }
   ]
 } 
