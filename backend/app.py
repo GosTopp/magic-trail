@@ -36,8 +36,23 @@ except Exception as e:
 # 加载 .env 文件中的环境变量
 load_dotenv()
 
+# 添加这些日志配置
+import sys
+import logging
+
+# 配置日志输出到 stdout
+logging.basicConfig(
+    stream=sys.stdout,
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
 app = Flask(__name__)
-app.logger.setLevel('DEBUG')  # 设置日志级别为 DEBUG
+# 确保 Flask 的日志也输出到 stdout
+app.logger.handlers = []
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.INFO)
 
 # 最简单的 CORS 配置
 CORS(app, resources={
@@ -62,8 +77,8 @@ def test():
 
 @app.route('/api/travel_guide', methods=['GET', 'POST', 'OPTIONS'])
 def travel_guide():
-    # 处理 OPTIONS 请求
     if request.method == 'OPTIONS':
+        app.logger.debug("Handling OPTIONS request")
         response = app.make_default_options_response()
         response.headers['Access-Control-Allow-Methods'] = 'POST'
         response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
@@ -71,27 +86,33 @@ def travel_guide():
         
     try:
         if request.method == 'POST':
-            app.logger.info("Received POST request")
+            app.logger.info("=== 开始处理新的旅游攻略请求 ===")
+            app.logger.info(f"请求头: {dict(request.headers)}")
+            
             data = request.get_json(force=True)
             user_input = data.get("input-guide", "")
             
+            app.logger.info(f"用户输入数据: {user_input}")
+            
             if not user_input:
+                app.logger.warning("收到空输入")
                 return jsonify({"error": "输入不能为空"}), 400
 
             # 检查环境变量
             if not endpoint or not key:
+                app.logger.error("API配置缺失: endpoint或key未设置")
                 return jsonify({"error": "API 配置错误"}), 500
 
-            # 记录更多日志
-            app.logger.info(f"Processing request with input length: {len(user_input)}")
-            
-            app.logger.info("Calling Azure AI Inference API")
+            app.logger.info(f"正在处理请求，输入长度: {len(user_input)}")
             
             # 将用户输入与景点信息结合
             formatted_prompt = _travel_prompt.format(
                 user_input=user_input,
                 attractions=attractions_info
             )
+            
+            app.logger.info("准备调用 Azure AI API...")
+            app.logger.debug(f"使用的模型: {model_name}")
             
             response = client.complete(
                 messages=[
@@ -103,20 +124,24 @@ def travel_guide():
                 stream=True
             )
 
+            app.logger.info("成功获取 API 响应，开始流式传输...")
+
             def generate():
-                for chunk in response:
-                    try:
+                chunk_count = 0
+                try:
+                    for chunk in response:
+                        chunk_count += 1
                         if chunk.choices and chunk.choices[0].delta.content:
                             content = chunk.choices[0].delta.content
-                            # content = content.decode('utf-8', errors='ignore')
-                            # content = content.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore')
                             data = json.dumps({'content': content}, ensure_ascii=False)
                             yield f"data: {data}\n\n"
                             time.sleep(0.01)
-                    except Exception as e:
-                        app.logger.error(f"处理数据流时出错: {str(e)}")
-                        continue
+                except Exception as e:
+                    app.logger.error(f"流式传输过程中出错: {str(e)}")
+                finally:
+                    app.logger.info(f"完成流式传输，共处理 {chunk_count} 个数据块")
 
+            app.logger.info("开始返回流式响应...")
             return Response(
                 generate(),
                 mimetype='text/event-stream',
@@ -129,6 +154,9 @@ def travel_guide():
     
     except Exception as e:
         app.logger.error(f"处理请求时发生错误: {str(e)}", exc_info=True)
+        # 记录更详细的错误信息
+        import traceback
+        app.logger.error(f"详细错误追踪:\n{traceback.format_exc()}")
         return jsonify({"error": f"处理请求时发生错误: {str(e)}"}), 500
 
 @app.errorhandler(405)
@@ -148,7 +176,5 @@ def handle_error(error):
     }), 500
 
 if __name__ == '__main__':
-    # 设置日志级别为 DEBUG
-    app.logger.setLevel('DEBUG')
     app.run(debug=True, host='0.0.0.0', port=5001)
     

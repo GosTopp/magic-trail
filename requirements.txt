@@ -1,5 +1,5 @@
-flask
-flask-cors
-python-dotenv
-pyyaml
-azure-ai-inference 
+flask==2.0.1
+flask-cors==3.0.10
+python-dotenv==0.19.0
+pyyaml==6.0.1
+azure-ai-inference==1.0.0 
