@@ -223,6 +223,8 @@ Let's make your Disney dreams come true! ✨
     }
   };
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -260,7 +262,7 @@ Let's make your Disney dreams come true! ✨
 
       const userInput = inputFields.join('\n');
 
-      const response = await fetch('http://localhost:5001/api/travel_guide', {
+      const response = await fetch(`${API_BASE_URL}/api/travel_guide`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -268,6 +270,10 @@ Let's make your Disney dreams come true! ✨
         body: JSON.stringify({ 'input-guide': userInput }),
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const reader = response.body.getReader();
       const decoder = new TextDecoder('utf-8', { fatal: false });
       
@@ -328,7 +334,7 @@ Let's make your Disney dreams come true! ✨
       }
     } catch (error) {
         console.error('Error:', error);
-        setGuide('抱歉，发生了错误，请稍后重试。');
+        setGuide(`发生错误: ${error.message}`);
     } finally {
         setIsLoading(false);
     }
@@ -342,7 +348,7 @@ Let's make your Disney dreams come true! ✨
     }
   }, [guide]);
 
-  console.log('API Base URL:', import.meta.env.VITE_API_BASE_URL);
+  console.log('API Base URL:', API_BASE_URL);
 
   return (
     <div className="container">
