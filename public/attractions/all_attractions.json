@@ -1,0 +1,612 @@
+[
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/shipwreck-shore/",
+        "attraction_name": "船奇戏水滩",
+        "attraction_description": "在\"宝藏湾\"主题园区的一艘海盗船残骸中探索戏水，感受互动乐趣。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 宝藏湾",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 互动项目"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.6684308645,
+            "lat": 31.151282805966
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-shipwreck-shore-new-e.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/pirates-of-caribbean/",
+        "attraction_name": "加勒比海盗——沉落宝藏之战",
+        "attraction_description": "伙计们，来加入杰克船长的海盗队伍，向海洋进发，来一场寻宝之旅，沿途还会遇上怪兽呢！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 宝藏湾",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 小幅降落, 高音量, 黑暗, 刺激",
+            "moreDetailsInfo": {
+                "moreDetailsModal-serviceAnimals": "允许导盲犬进入",
+                "moreDetailsModal-interests": "室内, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "你可能会淋湿。打住！你们将于臭名昭著的杰克船长一起，叱咤公海！你们可能遇到令人毛骨悚然的骷髅。听到震耳欲聋的声响。甚至一个在水雾里的短暂急坠。伙计们，欢迎上船！\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间\n所有同行人员须一同排队，如果需要离开排队区，请向演职人员提出。感谢您的配合！"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.668203035393,
+            "lat": 31.151571488436
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-pirates-of-caribbean-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/sirens-revenge/",
+        "attraction_name": "探秘海妖复仇号",
+        "attraction_description": "登上真正的海盗船，体验海盗的刺激生活与惊险行动。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 宝藏湾",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 互动项目"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.66931519362,
+            "lat": 31.151371967495
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-sirens-revenge-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/explorer-canoes/",
+        "attraction_name": "探险家独木舟",
+        "attraction_description": "登上探险家独木舟，划着船桨，开启在\"宝藏湾\"和\"探险岛\"两大主题园区的刺激探险之旅。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 宝藏湾",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 水花四溅",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "探险家独木舟是自由浮动的船只，由游客们自行掌桨穿越宝藏湾水域。人人动手划，共同分享这个10分钟的旅程。\n7岁以下儿童必须穿救生衣。有成年救生衣尺码提供。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n坐下时双脚必须着地。\n请勿抱坐。\n乘客必须神智清醒且身体状况健康良好。\n必须步行通过。\n轮椅乘客必须换乘。"
+            }
+        },
+        "operational_hours": "上午 9:30 至 下午 4:00",
+        "location": {
+            "lng": 121.66853728375,
+            "lat": 31.149957188067
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-explorer-canoes-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/rexs-rc-racer/",
+        "attraction_name": "抱抱龙冲天赛车",
+        "attraction_description": "在好朋友三角龙特蕾西的帮助下，抱抱龙将邀请大家坐上遥控冲天赛车，在长长的\"U\"型轨道上开启一段精彩刺激的冒险旅程。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 迪士尼·皮克斯玩具总动员",
+            "restrictionInfo": "游客必须为 120厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 刺激",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "登上抱抱龙冲天赛车，体验一番刺激的极速之旅，在险峻的赛车轨道上前后飞驰。\n为确保安全，游客应该在身体状况健康良好的情况下乘坐此游乐设备。若您患有高血压、心脏病、背部或颈部不适、易眩晕以及其他必须避免刺激的健康问题，请勿登载。\n孕妇不宜乘坐。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒。\n身高未达限定者请勿乘坐。\n登载游乐设备前，须将随身物品收妥，或请他人代为保管。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.663115,
+            "lat": 31.149449
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-rexs-racer-new-c.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/slinky-dog-spin/",
+        "attraction_name": "弹簧狗团团转",
+        "attraction_description": "来迪士尼·皮克斯玩具总动员主题园区，坐上弹簧狗的螺旋形弹簧，和他一起欢快地围着一个盛满了玩具骨头的大狗盘绕圈。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 迪士尼·皮克斯玩具总动员",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.66354,
+            "lat": 31.149322
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-slinky-dog-spin-hero-v2.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/woodys-round-up/",
+        "attraction_name": "胡迪牛仔嘉年华",
+        "attraction_description": "跳上怀旧的西部马车，让小马们拉着你，踏着欢快的音乐，一同摇摆。就在迪士尼·皮克斯玩具总动员主题园区。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 迪士尼·皮克斯玩具总动员",
+            "restrictionInfo": "游客必须为 81厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n身高未达限定者请勿乘坐。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.663769,
+            "lat": 31.150164
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-woody-new-b.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/zootopia-hot-pursuit/",
+        "attraction_name": "疯狂动物城：热力追踪",
+        "attraction_description": "*使用该尊享卡的游客可快速进入疯狂动物城。请注意，从尊享卡通道进入疯狂动物城：热力追踪景点时，将无法体验完整的排队区场景。 渴望尝试一切的你，将作为动物城警察局的新警员，加入巡逻，不料途中突发案件：坏绵羊越狱，与同伙一起绑架大明星夏奇羊！朱迪和尼克邀你一起驾驶警车，飞身加入环环相扣的热力追踪：疾驰冰川镇、穿梭撒哈拉广场，飞越雨林跑道……一路沉浸在热烈疯狂的追逐中！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 疯狂动物城",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 黑暗, 小幅降落",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室内, 单人排队区",
+                "moreDetailsModal-guestPolicies": "疯狂动物城：热力追踪将带您登上动物城警车，在各个街区间极速穿梭，展开一场惊险追逐。其间您会遇到急转、陡停和短暂的黑暗环境。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间\n所有同行人员须一同排队，如果需要离开排队区，请向演职人员提出。感谢您的配合！"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.666285,
+            "lat": 31.152389
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-hot-pursuit-hero-20240104.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/alice-wonderland-maze/",
+        "attraction_name": "爱丽丝梦游仙境迷宫",
+        "attraction_description": "穿越爱丽丝梦游仙境中蜿蜒的迷宫，参加愉快的疯狂茶会派对。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外",
+                "moreDetailsModal-guestPolicies": "由您自己选择一条蜿蜒的道路，穿越仙境，前往疯帽子的茶会。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 7:00",
+        "location": {
+            "lng": 121.66616207126300,
+            "lat": 31.1508361265792
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-alice-new-b.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/voyage-to-crystal-grotto/",
+        "attraction_name": "晶彩奇航",
+        "attraction_description": "晶彩奇航将借助音乐、灯光和神奇魔法，为游客呈现迪士尼经典故事。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 缓速",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室外",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "这是一个适合全家人共同分享的舒缓的船载体验，沿途风光旖旎，涉及灵感源自水晶窟之神奇力量的一座座精品陈列两岸，栩栩如生地描绘着经典的梦幻故事。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n请注意：景点运行过程中仅可同时承载一定数量的轮椅，因此可能会影响您的等候时间\n轮椅乘客无需换乘。"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.664973366207,
+            "lat": 31.1497810898181
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/2/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-voyage-to-the-crystal-grotto-hero-20210518-new.png"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/once-upon-time-adventure/",
+        "attraction_name": "漫游童话时光",
+        "attraction_description": "穿过魔镜，进入奇幻世界：白雪公主的童话世界。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内, 互动项目",
+                "moreDetailsModal-guestPolicies": "跟随一缕仙尘，沿着旋梯，登上城堡顶端，踏进一个充满浪漫与惊险的世界 - 白雪公主的童话世界。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n轮椅乘客无需换乘。"
+            }
+        },
+        "operational_hours": "上午 9:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.665840487774,
+            "lat": 31.1500204783301
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-once-upon-time-adventure-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/seven-dwarfs-mine-train/",
+        "attraction_name": "七个小矮人矿山车",
+        "attraction_description": "适合全家共同体验的过山车项目——穿梭在《白雪公主和七个小矮人》的钻石矿山中。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 97厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 急速降落, 刺激",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室外, 单人排队区",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "七个小矮人矿山车是一项精彩的过山车式游乐项目，摇摆不定的矿车载着游客穿梭于连绵起伏的乡村，进入七个小矮人的钻石矿里，时而急转弯、突坠和陡停。\n孕妇不宜乘坐。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状況健康良好。\n身高未达限定者请勿乘坐。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.666250852651,
+            "lat": 31.1512476666026
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-seven-dwarfs-mine-train-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/peter-pans-flight/",
+        "attraction_name": "小飞侠天空奇遇",
+        "attraction_description": "和小飞侠、奇妙仙子还有梦幻岛的同伴一起遨游天际，朝着右边第二颗星的方向前行。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "thrillFactorInfo": "惊险程度 黑暗",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室内",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "登上飞翔的海盗船，在伦敦上空扬帆起航，展开一次飞向梦幻岛的惊险旅程。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.66435218477,
+            "lat": 31.149743473847
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-peter-pans-flight-new-e.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/adventures-winnie-pooh/",
+        "attraction_name": "小熊维尼历险记",
+        "attraction_description": "进入百亩森林，探索小熊维尼和朋友们的美妙世界！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "thrillFactorInfo": "惊险程度 黑暗",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室内",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "小熊维尼历险记是一个缓慢而舒适的旅程，带您穿越茂盛的百亩森林。您乘坐的车辆将会在旅程中，随着故事情节的发展轻轻摇晃。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客无需换乘。\n请注意：景点运行过程中仅可同时承载一定数量的轮椅，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.665299510689,
+            "lat": 31.15180406306
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-winnie-the-pooh-new-c.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/hunny-pot-spin/",
+        "attraction_name": "旋转疯蜜罐",
+        "attraction_description": "与同伴一起乘坐旋转疯蜜罐，在自由控制的旋转中体验寻找美味的乐趣。小熊维尼和他的伙伴在等着你！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.665325633961,
+            "lat": 31.1515364057724
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-hunny-pot-spin-new-b.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/buzz-lightyear-planet-rescue/",
+        "attraction_name": "巴斯光年星际营救",
+        "attraction_description": "投身战斗，竭尽全力消灭索克天王手下骇人的机器人部队，拯救外星人的星球！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 明日世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 黑暗",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内, 互动项目, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "巴斯光年星际营救是一次互动探险的旅程。在这里，您将登上一艘徐徐前进的太空巡逻艇，在自行掌握旋转的同时，与巴斯光年一起迎战邪恶的索克天王。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客无需换乘。\n请注意：景点运行过程中仅可同时承载一定数量的轮椅，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.664209226414,
+            "lat": 31.1472793281538
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-buzz-lightyear-new-c.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/tron-lightcycle-power-run/",
+        "attraction_name": "创极速光轮－雪佛兰呈献",
+        "attraction_description": "进入\"创\"的电子网络世界，随着极速光轮、极速转向，全力奔驰吧！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 明日世界",
+            "restrictionInfo": "游客必须为 122厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 刺激, 黑暗, 急速降落",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "创极速光轮是一项惊心动魄的急速过山车式游乐项目。游客将骑着摩托车造型的车辆在黑暗的电子世界里风驰电掣，经历急速、忽坠、陡停等体验。\n为确保安全，游客应该在身体状况健康良好的情况下乘坐此游乐设备。若您患有高血压、心脏病、背部或颈部不适、易眩晕以及其他必须避免刺激的健康问题，请勿登载。\n孕妇不宜乘坐。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n身高未达限定者请勿乘坐。\n乘客必须神智清醒。\n所有随身物品必须寄存，或请他人代为保管。\n此游乐设备的安全限制可能使个别体型的游客无法乘坐。\n轮椅乘客可换乘车辆。轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.663256644584,
+            "lat": 31.1481776620923
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-tron-lightcycle-power-run-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/tron-realm/",
+        "attraction_name": "创界：雪佛兰数字挑战",
+        "attraction_description": "探索奇妙的未来驾驶世界，游客们在这里能体验全新一代雪佛兰概念车与创世界尖端技术的融合。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 明日世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "互动项目"
+            }
+        },
+        "operational_hours": "上午 10:00 至 晚上 8:30",
+        "location": {
+            "lng": 121.663286,
+            "lat": 31.147743
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-tron-realm-new-b.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/jet-packs/",
+        "attraction_name": "喷气背包飞行器",
+        "attraction_description": "加速，再加速，带着这次未来之旅令人激动的兴奋感出发！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 明日世界",
+            "restrictionInfo": "游客必须为 112厘米或以上",
+            "ageInfo": "适合年龄 所有年龄",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n孕妇不宜乘坐。\n身高未达限定者请勿乘坐。\n乘客必须神智清醒且身体状况健康良好。\n登载游乐设备前，须将随身物品收妥，或将他们存放在所提供的储物箱里。\n请确保义肢固定牢靠。\n此游乐项目的安全限制可能使个别体型的游客无法乘坐。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.665124670006,
+            "lat": 31.1477166285573
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-jet-packs-new-c.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/stitch-encounter/",
+        "attraction_name": "太空幸会史迪奇",
+        "attraction_description": "阿咯哈（Aloha）! 快来太空观察站\"幸会史迪奇\"！不要担心，请跟这个毛茸茸的调皮蓝色小外星人打招呼吧，他保证让您捧腹大笑！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 明日世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "互动项目, 室内",
+                "moreDetailsModal-guestPolicies": "这是一个互动剧院体验，你可以和最顽皮的外星生物 - 史迪奇见面及交谈。\n在此景点中请将手机调至静音。请勿进食、吸烟或使用闪光灯。"
+            }
+        },
+        "operational_hours": "上午 11:00 至 晚上 7:00",
+        "location": {
+            "lng": 121.664748173462,
+            "lat": 31.1475041344818
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-stitch-encounter-hero.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/fantasia-carousel/",
+        "attraction_name": "幻想曲旋转木马",
+        "attraction_description": "乘坐飞马，伴随迪士尼《幻想曲》中恢弘大气的交响乐，回旋在梦幻的世界里。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 奇想花园",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外, 乘客可轮换项目",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n身高不足120cm不可独自乘坐。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客无需换乘。\n请注意：景点运行过程中仅可同时承载一定数量的轮椅，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.6678167632,
+            "lat": 31.148810096307
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-fantasia-carousel-b-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/marvel-universe/",
+        "attraction_name": "漫威英雄总部",
+        "attraction_description": "深入漫威英雄总部，您将有幸遇到一些自己喜爱的漫威超级英雄！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 奇想花园",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内, 互动项目",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。"
+            }
+        },
+        "operational_hours": "上午 9:30 至 晚上 8:00",
+        "location": {
+            "lng": 121.665393253818,
+            "lat": 31.1485217753065
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-marvel-universe-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/become-iron-man/",
+        "attraction_name": "漫威英雄总部 – 变身钢铁侠",
+        "attraction_description": "利用虚拟技术试穿钢铁侠的高科技装备！学习如何使用钢铁侠最引以为傲的冲击波，能和浩克对战，更能击退敌人保卫我们的城市！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 奇想花园",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内, 互动项目, 与迪士尼朋友见面",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。"
+            }
+        },
+        "operational_hours": "上午 9:30 至 晚上 8:00",
+        "location": {
+            "lng": 121.665078,
+            "lat": 31.148647
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-become-icon-man-hero.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/dumbo-flying-elephant/",
+        "attraction_name": "小飞象",
+        "attraction_description": "乘着小飞象在空中尽情飞翔！他是奇想花园冉冉升起的超级明星。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 奇想花园",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 学龄前儿童, 儿童, 8-13岁少年",
+            "thrillFactorInfo": "惊险程度 旋转",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室外",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 7:00",
+        "location": {
+            "lng": 121.66635200217,
+            "lat": 31.148841563822
+        },
+        "image_url": "https://secure.cdn3.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-dumbo-flying-elephant-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/soaring-over-horizon/",
+        "attraction_name": "翱翔•飞越地平线",
+        "attraction_description": "来一场令人兴奋的飞行，以前所未有的方式见证这个神奇的世界吧！",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 探险岛",
+            "restrictionInfo": "游客必须为 102厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室内",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "如雷鸟一般在空中翱翔，环游世界。这是一次悬于空中的飞翔冒险，您将经历忽坠、转弯，俯冲和提升等惊险体验。\n有恐高症或易眩晕的游客不宜乘坐。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n身高未达限定者请勿乘坐。\n乘客必须神智清醒且身体状况健康良好。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间"
+            }
+        },
+        "operational_hours": "上午 8:30 至 晚上 8:30",
+        "location": {
+            "lng": 121.671500444517,
+            "lat": 31.1502881607996
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-soaring-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/camp-discovery/",
+        "attraction_name": "古迹探索营",
+        "attraction_description": "在探索探险岛的过程中，穿越绳索挑战道，踏上探索步行道，发掘部落遗迹。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 探险岛",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外",
+                "moreDetailsModal-guestPolicies": "请注意：游客必须身高在106厘米（41.5英寸）或以上才可以体验古迹探索营的3条挑战道。\n此体验包含在半空中进行的体能活动，请务必穿着适合此类体验的服装并妥当地穿好鞋子。必须穿不会松脱、不露脚趾且脚后跟有系带固定的鞋。"
+            }
+        },
+        "operational_hours": "上午 9:15 至 晚上 8:30",
+        "location": {
+            "lng": 121.670013,
+            "lat": 31.149761
+        },
+        "image_url": "https://secure.cdn4.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-camp-discovery-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/roaring-rapids/",
+        "attraction_name": "雷鸣山漂流",
+        "attraction_description": "踏上刺激的漂筏之旅，深入黑暗的深渊，和凶猛的巨兽赛跑， 在激流中辗转翻腾。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 探险岛",
+            "restrictionInfo": "游客必须为 107厘米或以上",
+            "ageInfo": "适合年龄 儿童, 8-13岁少年, 青少年, 成人",
+            "thrillFactorInfo": "惊险程度 急速降落, 黑暗, 高音量, 水花四溅, 刺激",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "乘客可轮换项目, 室外",
+                "moreDetailsModal-additionalServices": "提供乘客轮换服务 More Information - 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 Beginning of tooltip content 当与不符合身高要求或者因为其他原因无法乘坐某些游乐设施的游客一同出游时，同行成员可以轮流游玩该景点，减少重复排队等候的时间。请在游乐设施入口处向演职人员询问您想体验的游乐设施是否提供该服务。 End of tooltip content",
+                "moreDetailsModal-guestPolicies": "您一定会淋湿，甚至可能湿透！\n雷鸣山漂流是一项惊心动魄的激流探险体验，漂流中您将经历急转弯、急速和突然下坠。小朋友可能会在此探险中受到惊吓。\n为确保安全，游客应该在身体状况健康良好的情况下乘坐此游乐设备。若您患有高血压、心脏病、背部或颈部不适、易眩晕以及其他必须避免刺激的健康问题，请勿登载。\n孕妇不宜乘坐。\n请时刻照看好同行的儿童。7岁以下儿童必须由16岁或以上人士陪同。\n乘客必须神智清醒。\n身高未达限定者请勿乘坐。\n轮椅乘客必须换乘。\n请注意：景点运行过程中仅可同时满足一定数量的换乘需求，因此可能会影响您的等候时间\n所有同行人员须一同排队，如果需要离开排队区，请向演职人员提出。感谢您的配合！"
+            }
+        },
+        "operational_hours": "",
+        "location": {
+            "lng": 121.66960123557,
+            "lat": 31.149338141182
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-roaring-new-d.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/giant-donald-duck/",
+        "attraction_name": "巨萌唐老鸭",
+        "attraction_description": "迪士尼小镇星愿湖居民\"巨萌唐老鸭\"高达11米，标志性水手服造型，萌态十足。游客可以尽情跟这位大可爱同框合影。",
+        "atAGlance": {
+            "basicLocationInfo": "迪士尼小镇 上海迪士尼度假区",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室外"
+            }
+        },
+        "operational_hours": "",
+        "location": {
+            "lng": 121.669839,
+            "lat": 31.145024
+        },
+        "image_url": "https://secure.cdn2.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-giant-donald-duck-hero-new.jpg"
+    },
+    {
+        "url": "https://www.shanghaidisneyresort.com/attractions/enchanted-storybook-castle/",
+        "attraction_name": "奇幻童话城堡",
+        "attraction_description": "奇幻童话城堡宏伟壮丽，塔尖高耸入云，欢迎各位到来。这里赋予了传奇的迪士尼故事无限生命力。",
+        "atAGlance": {
+            "basicLocationInfo": "上海迪士尼乐园 梦幻世界",
+            "restrictionInfo": "游客必须为 所有身高",
+            "ageInfo": "适合年龄 所有年龄",
+            "moreDetailsInfo": {
+                "moreDetailsModal-interests": "室内"
+            }
+        },
+        "operational_hours": "",
+        "location": {
+            "lng": 121.666110117446,
+            "lat": 31.1500112466785
+        },
+        "image_url": "https://secure.cdn1.wdpromedia.cn/resize/mwImage/1/630/354/75/wdpromedia.disney.go.com/media/wdpro-shdr-assets/prod/zh-cn-cn/system/images/shdr-att-enchanted-storybook-castle-hero-new.jpg"
+    }
+]
