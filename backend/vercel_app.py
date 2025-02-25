@@ -10,7 +10,7 @@ from azure.core.credentials import AzureKeyCredential
 from dotenv import load_dotenv
 import time
 import codecs
-from ruamel.yaml import YAML
+import yaml
 
 # 获取当前文件所在目录的路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
