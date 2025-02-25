@@ -33,5 +33,27 @@ app.debug = True
 def test():
     return jsonify({"message": "API 工作正常!"})
 
+# 添加 travel_guide 路由
+@app.route('/api/travel_guide', methods=['GET', 'POST'])
+def travel_guide():
+    try:
+        # 这里添加你的 travel_guide 逻辑
+        # 如果你有 Azure 调用，确保环境变量已设置
+        return jsonify({
+            "status": "success",
+            "message": "Travel guide API is working",
+            "data": {
+                "title": "Disney Travel Guide",
+                "description": "Welcome to Disney Resort!",
+                "attractions": [
+                    {"name": "Castle", "description": "Magical castle in the center of the park"},
+                    {"name": "Adventure Isle", "description": "Explore the mysterious island"},
+                    {"name": "Tomorrowland", "description": "Experience the future today"}
+                ]
+            }
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 if __name__ == '__main__':
     app.run() 
