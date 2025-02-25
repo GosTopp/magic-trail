@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: process.env.NODE_ENV === 'production' 
-          ? 'https://你的域名.vercel.app' 
+          ? 'https://magic-trail.vercel.app'
           : 'http://localhost:8080',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
