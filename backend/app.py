@@ -54,10 +54,10 @@ app.logger.handlers = []
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.INFO)
 
-# 最简单的 CORS 配置
+# 配置 CORS
 CORS(app, resources={
     r"/api/*": {
-        "origins": "*",  # 在生产环境中应该设置具体的域名
+        "origins": os.environ.get("CORS_ALLOW_ORIGINS", "*"),
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type"],
         "expose_headers": ["Content-Type"]
@@ -176,5 +176,6 @@ def handle_error(error):
     }), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port)
     

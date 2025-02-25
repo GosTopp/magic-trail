@@ -225,15 +225,18 @@ Let's make your Disney dreams come true! ✨
 
   // 根据环境自动选择 API 基础 URL
   const getApiBaseUrl = () => {
-    if (import.meta.env.VITE_API_BASE_URL) {
-      return import.meta.env.VITE_API_BASE_URL;
+    // 在开发环境中使用空字符串，走代理
+    if (import.meta.env.DEV) {
+      return '';
     }
     
-    // 在 Vercel 上使用相对路径
-    return '';
+    // 在生产环境使用环境变量或空字符串
+    return import.meta.env.VITE_API_BASE_URL || '';
   };
 
-  const API_BASE_URL = getApiBaseUrl();
+  const API_BASE_URL = window.localStorage.getItem('useRelativeApi') === 'true'
+    ? ''
+    : getApiBaseUrl();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -272,7 +275,7 @@ Let's make your Disney dreams come true! ✨
 
       const userInput = inputFields.join('\n');
 
-      const response = await fetch(`${API_BASE_URL}/api/travel_guide`, {
+      const response = await fetch('/api/travel_guide', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
