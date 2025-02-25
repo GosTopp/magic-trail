@@ -3,7 +3,15 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: 'dist',
-  },
+  server: {
+    proxy: {
+      '/api': {
+        target: process.env.NODE_ENV === 'production' 
+          ? 'https://你的域名.vercel.app' 
+          : 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 }) 

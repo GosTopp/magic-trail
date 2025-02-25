@@ -1,8 +1,7 @@
-try:
-    from app import app
-except ImportError:
-    from .app import app
+from flask import Flask, request, jsonify
+from app import app
 
-# Vercel需要这个来作为入口点 
+app.debug = True
 
-# 确保实例可被 Vercel 调用 
+if __name__ == '__main__':
+    app.run() 
