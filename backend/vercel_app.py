@@ -176,7 +176,5 @@ def handle_error(error):
     }), 500
 
 # Vercel 需要的处理函数
-from flask import request
-
 def handler(event, context):
-    return app(event, context)
+    return app
