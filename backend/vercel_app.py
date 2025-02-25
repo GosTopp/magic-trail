@@ -9,10 +9,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # 创建新的 Flask 应用
 app = Flask(__name__)
 
-# 启用 CORS
+# 修改 CORS 配置，允许所有来源
 CORS(app, resources={
     r"/*": {
-        "origins": ["https://magic-trail.vercel.app", "http://localhost:5173"],
+        "origins": "*",  # 允许所有来源
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
     }
@@ -37,8 +37,11 @@ def test():
 @app.route('/api/travel_guide', methods=['GET', 'POST'])
 def travel_guide():
     try:
-        # 这里添加你的 travel_guide 逻辑
-        # 如果你有 Azure 调用，确保环境变量已设置
+        # 添加请求信息日志
+        print(f"Received request: {request.method} {request.path}")
+        print(f"Headers: {request.headers}")
+        
+        # 返回响应
         return jsonify({
             "status": "success",
             "message": "Travel guide API is working",
@@ -53,6 +56,7 @@ def travel_guide():
             }
         })
     except Exception as e:
+        print(f"Error: {str(e)}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '__main__':
