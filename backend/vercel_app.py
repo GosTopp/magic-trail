@@ -10,28 +10,26 @@ from azure.core.credentials import AzureKeyCredential
 from dotenv import load_dotenv
 import time
 import codecs
-import yaml
+from ruamel.yaml import YAML
 
 # 获取当前文件所在目录的路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(current_dir)
 
-# 修改文件读取路径
+# 读取提示词
+prompt_path = os.path.join(project_root, 'public', 'prompt.yml')
+with open(prompt_path, 'r', encoding='utf-8') as f:
+    prompts = yaml.load(f)
+_travel_prompt = prompts['travel_guide_prompt']
+
+# 读取景点信息
 try:
-    # 读取景点信息
     attractions_path = os.path.join(project_root, 'public', 'attractions', 'all_attractions.json')
     with open(attractions_path, 'r', encoding='utf-8') as f:
         attractions_info = json.load(f)
-
-    # 读取提示词
-    prompt_path = os.path.join(project_root, 'public', 'prompt.yml')
-    with open(prompt_path, 'r', encoding='utf-8') as f:
-        prompts = yaml.safe_load(f)
-    _travel_prompt = prompts['travel_guide_prompt']
 except Exception as e:
-    print(f"Error loading files: {str(e)}")
+    print(f"Error loading attractions: {str(e)}")
     attractions_info = []
-    _travel_prompt = ""
 
 # 加载 .env 文件中的环境变量
 load_dotenv()
@@ -176,7 +174,5 @@ def handle_error(error):
     }), 500
 
 # Vercel 需要的处理函数
-from flask import Request
-
-def handler(event, context):
-    return app(Request(event))
+def handler(request, context):
+    return app
