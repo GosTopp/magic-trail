@@ -225,21 +225,12 @@ Let's make your Disney dreams come true! ✨
 
   // 根据环境自动选择 API 基础 URL
   const getApiBaseUrl = () => {
-    // 如果有环境变量，优先使用
     if (import.meta.env.VITE_API_BASE_URL) {
       return import.meta.env.VITE_API_BASE_URL;
     }
     
-    // 检测当前环境
-    const hostname = window.location.hostname;
-    
-    // 本地开发环境
-    if (hostname === 'localhost' || hostname === '127.0.0.1') {
-      return 'http://localhost:8080';
-    }
-    
-    // Vercel 生产环境
-    return '';  // 空字符串表示使用相对路径
+    // 在 Vercel 上使用相对路径
+    return '';
   };
 
   const API_BASE_URL = getApiBaseUrl();

@@ -1,118 +1,103 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
-import sys
+import json
 import os
-import openai
-import flask
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage, UserMessage
+from azure.core.credentials import AzureKeyCredential
+import yaml
+from dotenv import load_dotenv
 
-# 添加当前目录到路径
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-# 创建新的 Flask 应用
 app = Flask(__name__)
+CORS(app)
 
-# 修改 CORS 配置，允许所有来源
-CORS(app, resources={
-    r"/*": {
-        "origins": "*",  # 允许所有来源
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    }
-})
+# 获取项目根目录
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# 确保正确设置了 OpenAI API 密钥
-openai.api_key = os.environ.get("OPENAI_API_KEY")
-
-# 导入路由
+# 加载景点信息和提示词
 try:
-    from backend.app import routes
-    # 如果 app.py 中有路由函数，可以手动注册
-    # 例如: app.route('/api/endpoint')(routes.endpoint_function)
-except ImportError:
-    print("无法导入路由")
+    attractions_path = os.path.join(project_root, 'public', 'attractions', 'all_attractions.json')
+    with open(attractions_path, 'r', encoding='utf-8') as f:
+        attractions_info = json.load(f)
 
-app.debug = True
+    prompt_path = os.path.join(project_root, 'public', 'prompt.yml')
+    with open(prompt_path, 'r', encoding='utf-8') as f:
+        prompts = yaml.safe_load(f)
+    _travel_prompt = prompts['travel_guide_prompt']
+except Exception as e:
+    print(f"Error loading files: {str(e)}")
+    attractions_info = []
+    _travel_prompt = ""
 
-# 添加一个测试路由
-@app.route('/api/test', methods=['GET'])
-def test():
-    return jsonify({"message": "API 工作正常!"})
+# 加载环境变量
+load_dotenv()
 
-# 添加 travel_guide 路由
-@app.route('/api/travel_guide', methods=['GET', 'POST', 'OPTIONS'])
+endpoint = os.environ.get("AZURE_INFERENCE_SDK_ENDPOINT")
+key = os.environ.get("AZURE_INFERENCE_SDK_KEY")
+model_name = os.environ.get("AZURE_INFERENCE_MODEL", "DeepSeek-R1")
+
+client = ChatCompletionsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+
+@app.route('/api/travel_guide', methods=['POST', 'OPTIONS'])
 def travel_guide():
     if request.method == 'OPTIONS':
-        print("Handling OPTIONS request")
         response = app.make_default_options_response()
         response.headers['Access-Control-Allow-Methods'] = 'POST'
         response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
         return response
-        
+
     try:
-        if request.method == 'POST':
-            print("=== 开始处理新的旅游攻略请求 ===")
-            print(f"请求头: {dict(request.headers)}")
-            
-            data = request.get_json(force=True)
-            user_input = data.get("input-guide", "")
-            
-            print(f"用户输入数据: {user_input}")
-            
-            if not user_input:
-                print("收到空输入")
-                return jsonify({"error": "输入不能为空"}), 400
-
-            # 检查环境变量
-            endpoint = os.environ.get("AZURE_INFERENCE_SDK_ENDPOINT")
-            key = os.environ.get("AZURE_INFERENCE_SDK_KEY")
-            model_name = os.environ.get("AZURE_INFERENCE_MODEL", "DeepSeek-R1")
-            
-            if not endpoint or not key:
-                print("API配置缺失: endpoint或key未设置")
-                return jsonify({"error": "API 配置错误"}), 500
-
-            # 简化版响应，用于测试
-            return jsonify({
-                "content": "# 测试响应\n\n这是一个测试响应，用于验证API是否正常工作。\n\n如果您看到这条消息，说明API已成功连接。"
-            })
-            
-    except Exception as e:
-        print(f"处理请求时发生错误: {str(e)}")
-        import traceback
-        print(f"详细错误追踪:\n{traceback.format_exc()}")
-        return jsonify({"error": f"处理请求时发生错误: {str(e)}"}), 500
-
-@app.route('/api/plan', methods=['POST'])
-def plan_trip():
-    try:
-        data = request.json
-        # 处理逻辑...
-        # 确保这里有适当的错误处理和日志记录
+        data = request.get_json(force=True)
+        user_input = data.get("input-guide", "")
         
-        # 返回响应...
-        return jsonify({"plan": result})
+        if not user_input:
+            return jsonify({"error": "输入不能为空"}), 400
+
+        formatted_prompt = _travel_prompt.format(
+            user_input=user_input,
+            attractions=attractions_info
+        )
+        
+        response = client.complete(
+            messages=[
+                SystemMessage(content="根据用户需求和上海迪士尼官方信息，为用户定制游玩攻略"),
+                UserMessage(content=formatted_prompt)
+            ],
+            model=model_name,
+            max_tokens=2048,
+            stream=True
+        )
+
+        def generate():
+            try:
+                for chunk in response:
+                    if chunk.choices and chunk.choices[0].delta.content:
+                        content = chunk.choices[0].delta.content
+                        data = json.dumps({'content': content}, ensure_ascii=False)
+                        yield f"data: {data}\n\n"
+            except Exception as e:
+                print(f"Streaming error: {str(e)}")
+                yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+        return Response(
+            generate(),
+            mimetype='text/event-stream',
+            headers={
+                'Cache-Control': 'no-cache',
+                'X-Accel-Buffering': 'no',
+                'Content-Type': 'text/event-stream; charset=utf-8',
+                'Access-Control-Allow-Origin': '*'
+            }
+        )
+
     except Exception as e:
-        print(f"Error: {str(e)}")  # 添加日志记录
+        print(f"Error in travel_guide: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
-# 添加一个简单的健康检查端点
-@app.route('/api/health', methods=['GET'])
-def health_check():
-    return jsonify({"status": "ok"})
+@app.route('/api/test', methods=['GET'])
+def test():
+    return jsonify({"message": "API is working!"})
 
-@app.route('/api/debug', methods=['GET'])
-def debug():
-    """调试端点，返回环境信息"""
-    return jsonify({
-        "status": "ok",
-        "env": {
-            "has_azure_endpoint": bool(os.environ.get("AZURE_INFERENCE_SDK_ENDPOINT")),
-            "has_azure_key": bool(os.environ.get("AZURE_INFERENCE_SDK_KEY")),
-            "model_name": os.environ.get("AZURE_INFERENCE_MODEL", "未设置"),
-            "python_version": sys.version,
-            "flask_version": flask.__version__
-        }
-    })
-
-if __name__ == '__main__':
-    app.run() 
+# Vercel 需要的处理函数
+def handler(request, context):
+    return app(request) 

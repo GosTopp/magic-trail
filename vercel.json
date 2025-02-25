@@ -8,14 +8,23 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/vercel_app.py",
-      "methods": ["GET", "POST", "OPTIONS"]
+      "dest": "backend/vercel_app.py"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/attractions/(.*)",
+      "dest": "/attractions/$1"
     },
     {
       "handle": "filesystem"
