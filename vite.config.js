@@ -9,7 +9,9 @@ export default defineConfig({
         target: process.env.VITE_API_BASE_URL || 'http://localhost:5001',
         changeOrigin: true
       }
-    }
+    },
+    host: true,
+    port: 5173
   },
   build: {
     outDir: 'dist'
