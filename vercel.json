@@ -14,11 +14,14 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/vercel_app.py"
+      "dest": "/backend/vercel_app.py"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 } 
