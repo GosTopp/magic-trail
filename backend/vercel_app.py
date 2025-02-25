@@ -19,7 +19,7 @@ project_root = os.path.dirname(current_dir)
 # 读取提示词
 prompt_path = os.path.join(project_root, 'public', 'prompt.yml')
 with open(prompt_path, 'r', encoding='utf-8') as f:
-    prompts = yaml.load(f)
+    prompts = yaml.safe_load(f)
 _travel_prompt = prompts['travel_guide_prompt']
 
 # 读取景点信息
