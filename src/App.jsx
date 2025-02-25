@@ -284,6 +284,9 @@ Let's make your Disney dreams come true! ✨
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
+      console.log('API响应状态:', response.status);
+      console.log('API响应headers:', [...response.headers.entries()]);
+      
       const reader = response.body.getReader();
       const decoder = new TextDecoder('utf-8', { fatal: false });
       
@@ -291,10 +294,17 @@ Let's make your Disney dreams come true! ✨
       
       let buffer = '';
       let currentContent = '';
-
+      
+      console.log('开始读取流数据');
+      
+      // 确保先设置初始内容
+      setGuide("正在生成攻略...");
+      
       while (true) {
           const { done, value } = await reader.read();
           if (done) break;
+          
+          console.log('收到数据片段:', decoder.decode(value, { stream: true }));
           
           buffer += decoder.decode(value, { stream: true });
           
