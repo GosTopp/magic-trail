@@ -19,19 +19,8 @@
       "dest": "backend/vercel_app.py"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/attractions/(.*)",
-      "dest": "/attractions/$1"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/$1"
     }
   ]
 } 

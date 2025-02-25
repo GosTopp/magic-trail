@@ -6,12 +6,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: process.env.NODE_ENV === 'production' 
-          ? 'https://magic-trail.vercel.app'
-          : 'http://localhost:8080',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        target: process.env.VITE_API_BASE_URL || 'http://localhost:5001',
+        changeOrigin: true
       }
     }
+  },
+  build: {
+    outDir: 'dist'
   }
 }) 
