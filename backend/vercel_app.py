@@ -173,47 +173,19 @@ def handle_error(error):
         "message": str(error)
     }), 500
 
-# 修改 Vercel 处理函数
-from http.server import BaseHTTPRequestHandler
-from io import BytesIO
-from urllib.parse import parse_qs
-
-class VercelHandler(BaseHTTPRequestHandler):
-    def __init__(self, event):
-        self.event = event
-        self.path = event.get('path', '/')
-        self.headers = event.get('headers', {})
-        self.body = event.get('body', '')
-        self.method = event.get('httpMethod', 'GET')
-
-    def make_response(self, response):
+# Vercel 需要的处理函数
+def handler(event, context):
+    # 将 Vercel 事件转换为 Flask 请求
+    with app.test_request_context(
+        path=event.get('path', '/'),
+        method=event.get('httpMethod', 'GET'),
+        headers=event.get('headers', {}),
+        data=event.get('body', '')
+    ):
+        # 处理请求并获取响应
+        response = app.full_dispatch_request()
         return {
             'statusCode': response.status_code,
             'headers': dict(response.headers),
             'body': response.get_data(as_text=True)
         }
-
-    def handle_request(self):
-        environ = {
-            'REQUEST_METHOD': self.method,
-            'PATH_INFO': self.path,
-            'QUERY_STRING': self.event.get('queryStringParameters', {}),
-            'CONTENT_LENGTH': str(len(self.body)) if self.body else '',
-            'CONTENT_TYPE': self.headers.get('content-type', ''),
-            'wsgi.input': BytesIO(self.body.encode() if isinstance(self.body, str) else self.body),
-            'wsgi.errors': BytesIO(),
-            'wsgi.multithread': False,
-            'wsgi.multiprocess': False,
-            'wsgi.run_once': False,
-            'wsgi.version': (1, 0),
-            'wsgi.url_scheme': 'https',
-            'SERVER_NAME': 'vercel',
-            'SERVER_PORT': '443',
-        }
-
-        response = app.wsgi_app(environ, lambda s, r: None)
-        return self.make_response(response)
-
-def handler(event, context):
-    vercel_handler = VercelHandler(event)
-    return vercel_handler.handle_request()
