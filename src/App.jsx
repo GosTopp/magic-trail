@@ -38,6 +38,12 @@ function App() {
     characterPreference: '',
     ticketType: '标准票'
   });
+  const [guideCompleted, setGuideCompleted] = useState(false);
+  const [showFullGuide, setShowFullGuide] = useState(false);
+  const [savedItineraries, setSavedItineraries] = useState([]);
+  const [showItineraryList, setShowItineraryList] = useState(false);
+  const [itineraryTitle, setItineraryTitle] = useState('');
+  const [showSaveModal, setShowSaveModal] = useState(false);
 
   const companionOptions = ["闺蜜", "情侣", "家人", "朋友", "家庭"];
 
@@ -242,6 +248,7 @@ Let's make your Disney dreams come true! ✨
     e.preventDefault();
     setIsLoading(true);
     setGuide('');
+    setGuideCompleted(false);
     setShowRequirementsModal(false);
     
     try {
@@ -355,9 +362,16 @@ Let's make your Disney dreams come true! ✨
               console.warn('处理剩余数据时出错:', e);
           }
       }
+      
+      // 在所有数据处理完成后，添加一个小延迟再设置完成标志
+      setTimeout(() => {
+        setGuideCompleted(true);
+      }, 500); // 500毫秒延迟，可以根据需要调整
+      
     } catch (error) {
         console.error('Error:', error);
         setGuide(`发生错误: ${error.message}`);
+        setGuideCompleted(false); // 出错时不显示按钮
     } finally {
         setIsLoading(false);
     }
@@ -373,11 +387,162 @@ Let's make your Disney dreams come true! ✨
 
   console.log('API Base URL:', API_BASE_URL);
 
+  // 修改按钮样式，确保两个按钮大小一致
+  const guideActionStyles = {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '10px',
+    marginTop: '20px',
+  };
+
+  const guideActionButtonStyles = {
+    padding: '14px 16px',
+    background: 'white',
+    color: '#1e88e5',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontSize: '12px',
+    fontWeight: 'bold',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    width: '120px',  // 设置固定宽度
+    textAlign: 'center',  // 文字居中
+  };
+
+  // 修改函数，将 <think> 标签内容转换为引用格式
+  const processThinkTags = (content) => {
+    if (typeof content !== 'string') return content;
+    // 将 <think> 和 </think> 之间的内容转换为 Markdown 引用格式
+    return content.replace(/<think>([\s\S]*?)<\/think>/g, (match, p1) => {
+      const quotedContent = p1.split('\n')
+        .map(line => line.trim() ? `> ${line}` : '>')
+        .join('\n');
+      return `\n${quotedContent}\n`;
+    });
+  };
+
+  // 添加新函数，完全移除 <think> 标签及其内容
+  const removeThinkTags = (content) => {
+    if (typeof content !== 'string') return content;
+    // 完全移除 <think> 和 </think> 之间的内容
+    return content.replace(/<think>[\s\S]*?<\/think>/g, '');
+  };
+
+  // 添加保存攻略的函数
+  const handleSaveItinerary = () => {
+    if (!guide) return; // 如果没有攻略内容，不执行保存
+    
+    // 显示保存模态框，让用户输入标题
+    setShowSaveModal(true);
+  };
+
+  // 确认保存攻略
+  const confirmSaveItinerary = () => {
+    const title = itineraryTitle || `攻略 ${savedItineraries.length + 1}`;
+    const newItinerary = {
+      id: Date.now(), // 使用时间戳作为唯一ID
+      title: title,
+      content: guide,
+      date: new Date().toLocaleDateString(),
+      formData: {...formData} // 保存用户的输入数据，以便将来可能的编辑
+    };
+    
+    setSavedItineraries(prev => [...prev, newItinerary]);
+    setShowSaveModal(false);
+    setItineraryTitle('');
+    
+    // 保存到本地存储
+    const updatedItineraries = [...savedItineraries, newItinerary];
+    localStorage.setItem('savedItineraries', JSON.stringify(updatedItineraries));
+  };
+
+  // 加载保存的攻略
+  useEffect(() => {
+    const savedItems = localStorage.getItem('savedItineraries');
+    if (savedItems) {
+      try {
+        setSavedItineraries(JSON.parse(savedItems));
+      } catch (e) {
+        console.error('加载保存的攻略失败:', e);
+      }
+    }
+  }, []);
+
+  // 查看保存的攻略
+  const viewSavedItinerary = (itinerary) => {
+    // 设置当前攻略内容
+    setGuide(itinerary.content);
+    // 直接显示全文模态框
+    setShowFullGuide(true);
+    // 关闭攻略列表
+    setShowItineraryList(false);
+  };
+
+  // 删除保存的攻略
+  const deleteItinerary = (id, e) => {
+    e.stopPropagation(); // 阻止事件冒泡
+    const updatedItineraries = savedItineraries.filter(item => item.id !== id);
+    setSavedItineraries(updatedItineraries);
+    localStorage.setItem('savedItineraries', JSON.stringify(updatedItineraries));
+  };
+
   return (
     <div className="container">
       <header className="header">
         <div className="header-content">
-          <div className="header-left"></div>
+          <div className="header-left">
+            {/* 改进的我的攻略下拉菜单 */}
+            <div className="itinerary-dropdown">
+              <button 
+                className="itinerary-btn"
+                onClick={() => setShowItineraryList(!showItineraryList)}
+              >
+                <span className="itinerary-icon">📋</span>
+                <span>My Itinerary</span>
+                <span className="dropdown-icon">{showItineraryList ? '▲' : '▼'}</span>
+              </button>
+              
+              {showItineraryList && (
+                <div className="itinerary-list-container">
+                  <div className="itinerary-list-header">
+                    <h3>My Itineraries</h3>
+                    <span>{savedItineraries.length} itineraries</span>
+                  </div>
+                  
+                  {savedItineraries.length > 0 ? (
+                    <div className="itinerary-list">
+                      {savedItineraries.map(item => (
+                        <div 
+                          key={item.id} 
+                          className="itinerary-card"
+                          onClick={() => viewSavedItinerary(item)}
+                        >
+                          <div className="itinerary-card-content">
+                            <h4>{item.title}</h4>
+                            <p className="itinerary-date">{item.date}</p>
+                          </div>
+                          <button 
+                            className="delete-itinerary-btn"
+                            onClick={(e) => deleteItinerary(item.id, e)}
+                            title="Delete"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="empty-list">
+                      <div className="empty-icon">📝</div>
+                      <p>No saved itineraries</p>
+                      <p className="empty-hint">Click "Save" button to save your itinerary</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
           <h1>Magic Trail</h1>
           <div className="header-logos">
             <img src="/assets/media/ATF logo_White.png" alt="ATF Logo" className="logo-atf" />
@@ -420,12 +585,36 @@ Let's make your Disney dreams come true! ✨
                           Planning...
                         </div>
                       ) : guide ? (
-                        <div 
-                          className="markdown-content"
-                          dangerouslySetInnerHTML={{ 
-                            __html: typeof guide === 'string' ? marked.parse(guide) : guide 
-                          }}
-                        />
+                        <div className="guide-container">
+                          <div 
+                            className="markdown-content"
+                            dangerouslySetInnerHTML={{ 
+                              __html: typeof guide === 'string' ? marked.parse(processThinkTags(guide)) : guide 
+                            }}
+                          />
+                          {guideCompleted && (
+                            <div className="disney-action-buttons">
+                              <button 
+                                className="disney-button"
+                                onClick={() => setShowFullGuide(true)}
+                              >
+                                Full Guide
+                              </button>
+                              <button 
+                                className="disney-button"
+                                onClick={handleSaveItinerary}
+                              >
+                                Save
+                              </button>
+                              <button 
+                                className="disney-button"
+                                onClick={() => console.log('生成地图功能暂未实现')}
+                              >
+                                Generate Map
+                              </button>
+                            </div>
+                          )}
+                        </div>
                       ) : (
                         <>
                           <h1>Plan your perfect Disney adventure! 🎢✨</h1>
@@ -687,6 +876,70 @@ Let's make your Disney dreams come true! ✨
                   onClick={handleSubmit}
                 >
                   Generate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 查看全文模态框 */}
+      {showFullGuide && (
+        <div className="modal-overlay">
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>My Magic Trail in Shanghai Disney Resort</h2>
+              <button className="modal-close" onClick={() => setShowFullGuide(false)}>×</button>
+            </div>
+            <div 
+              className="blog-content"
+              dangerouslySetInnerHTML={{ 
+                __html: typeof guide === 'string' ? marked.parse(removeThinkTags(guide)) : guide 
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* 添加保存攻略的模态框 */}
+      {showSaveModal && (
+        <div className="modal-overlay">
+          <div className="modal-content save-modal">
+            <div className="modal-header">
+              <h2>Save Itinerary</h2>
+              <button 
+                className="modal-close" 
+                onClick={() => setShowSaveModal(false)}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div className="modal-body">
+              <div className="form-group">
+                <label>Itinerary Title</label>
+                <input
+                  type="text"
+                  value={itineraryTitle}
+                  onChange={(e) => setItineraryTitle(e.target.value)}
+                  placeholder="Enter a title for your itinerary"
+                />
+              </div>
+              
+              <div className="modal-footer">
+                <button 
+                  type="button" 
+                  className="modal-cancel-btn"
+                  onClick={() => setShowSaveModal(false)}
+                >
+                  Cancel
+                </button>
+                <button 
+                  type="button" 
+                  className="modal-submit-btn"
+                  onClick={confirmSaveItinerary}
+                >
+                  Save
                 </button>
               </div>
             </div>
